@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+       
+        <div if:false={viewButton}>
+        <lightning-button style="margin-left: 1rem;" label="View Invoice" onclick={onhandleClickView}></lightning-button> 
+        </div> 
+        <div if:true={viewButton}>    
+        <iframe src={url} width="100%" height="500px;"></iframe>
+        </div>
+        <div if:false={viewButton}>
+        <lightning-button style="margin-left: 3rem;" label="Send Email" onclick={onhandleClickSendEmail}></lightning-button>
+        </div>
+    </lightning-card>
+      
+</template>
